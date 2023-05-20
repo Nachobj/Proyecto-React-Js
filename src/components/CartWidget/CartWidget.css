@@ -1,8 +1,12 @@
-.imgCart {
-    width: 3rem;
-}
-
-.cart {
+.cartIcon {
     margin: 20px;
     color: white;
+    width: 40px;
+    height: 40px;
+}
+
+.cart{
+    color: white;
+    margin: 20px;
+    font-size: 1.5rem;
 }

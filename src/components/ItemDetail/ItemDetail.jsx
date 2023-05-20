@@ -1,4 +1,5 @@
 import './ItemDetail.css'
+import Carousel from 'react-bootstrap/Carousel';
 
 const ItemDetail = ({id, nombre, precio, img}) => {
   return (

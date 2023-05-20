@@ -12,12 +12,9 @@ const Item = ({id, nombre, precio, img}) => {
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={img} />
         <Card.Body>
-          <Card.Title>Nombre: {nombre}</Card.Title>
-          <p>Precio: {precio}</p>
+          <Card.Title>{nombre}</Card.Title>
+          <p>Precio: $ {precio} ARS</p>
           <p>ID: {id}</p>
-          {/* <Button variant="warning">
-            Detalle del juego
-          </Button> */}
           <Link to={`/item/${id}`}>Detalle del juego</Link>
         </Card.Body>
         {/* <ItemCount /> */}

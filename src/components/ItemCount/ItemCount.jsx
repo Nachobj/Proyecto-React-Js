@@ -1,34 +1,3 @@
-// import { useState } from "react"
-
-// const ItemCount = () => {
-//     const [count, setCount] = useState(1);
-
-//     let stock = 8;
-
-//     const sumarProducto = () => {
-//         if(count < stock) {
-//             setCount(count + 1);
-//         }
-//     }
-
-//     const eliminarProducto = () => {
-//         if(count > 1) {
-//             setCount(count - 1);
-//         }
-//     }
-
-//   return (
-//     <div>
-//         <button onClick={eliminarProducto}> - </button>
-//         <p>{count}</p>
-//         <button onClick={sumarProducto}> + </button>
-//     </div>
-//   )
-// }
-
-// export default ItemCount;
-
-
 import { useState, useEffect } from "react";
 
 const ItemCount = ({inicial, stock}) => {

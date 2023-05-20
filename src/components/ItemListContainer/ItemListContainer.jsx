@@ -16,10 +16,11 @@ const ItemListContainer = () => {
         .catch(error => console.log(error))
     }, [idCat])
 
+
   return (
     <>
-        <h2 style={{textAlign: "center"}}>Videojuegos</h2>
-        <ItemList videojuegos={videojuegos}/>
+      <h2 className='subtitulo'>Tendencias</h2>
+      <ItemList className='bgBody' videojuegos={videojuegos}/>
     </>
   )
 }
