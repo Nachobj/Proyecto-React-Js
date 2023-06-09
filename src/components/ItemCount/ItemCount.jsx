@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import './ItemCount.css';
 
-const ItemCount = ({inicial, stock}) => {
+const ItemCount = ({inicial, stock, añadir}) => {
     const [count, setCount] = useState(inicial);
     const [color, setColor] = useState("black");
 
@@ -33,16 +34,19 @@ const ItemCount = ({inicial, stock}) => {
     }
 
   return (
-    <div>
-        <h2>Contador</h2>
+    <>
+        <div>
+            <h2>Contador</h2>
 
-        <button onClick={ eliminarProducto }> - </button>
-        <strong>{count}</strong>
-        <button onClick={ sumarProducto }> + </button>
-        <br /><br />
+            <button onClick={ eliminarProducto }> - </button>
+            <strong>{count}</strong>
+            <button onClick={ sumarProducto }> + </button>
+            <br /><br />
 
-        <button onClick={ agregarProducto } id="boton" style={{color: color}} >Agregar producto</button>
-    </div>
+            {/* <button onClick={ agregarProducto } id="boton" style={{color: color}} >Agregar producto</button> */}
+        </div>
+        <button onClick={() => añadir(count)}>Agragar producto</button>
+    </>
   )
 }
 

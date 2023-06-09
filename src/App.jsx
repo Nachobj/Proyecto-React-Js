@@ -4,19 +4,19 @@ import NavBar from './components/NavBar/NavBar';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
 function App() {
   return (
-      <>
-        <BrowserRouter>
+    <>
+      <BrowserRouter>
         <NavBar/>
           <Routes>
             <Route path='/' element={ <ItemListContainer/> }/>
             <Route path='/categoria/:idCat' element={ <ItemListContainer/> }/>
             <Route path='/item/:idItem' element={ <ItemDetailContainer/> }/>
+            <Route path='*' element={<h2>Sitio en mantenimiento</h2>} />
           </Routes>
-        </BrowserRouter>
-      </>
+      </BrowserRouter>
+    </>
   );
 }
 

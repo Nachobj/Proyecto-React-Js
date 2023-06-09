@@ -12,11 +12,12 @@ const ItemDetailContainer = () => {
             .then(res => setJuego(res))
             .catch(error => console.log(error))
     }, [idItem])
+
   return (
     <div>
-        <ItemDetail {...juego}/>
+      <ItemDetail {...juego}/>
     </div>
   )
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
