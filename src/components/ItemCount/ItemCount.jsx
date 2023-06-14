@@ -43,9 +43,8 @@ const ItemCount = ({inicial, stock, añadir}) => {
             <button onClick={ sumarProducto }> + </button>
             <br /><br />
 
-            {/* <button onClick={ agregarProducto } id="boton" style={{color: color}} >Agregar producto</button> */}
         </div>
-        <button onClick={() => añadir(count)}>Agragar producto</button>
+        <button onClick={() => añadir(count)}>Agregar producto</button>
     </>
   )
 }

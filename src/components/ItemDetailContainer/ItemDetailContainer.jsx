@@ -1,16 +1,23 @@
-import {useState, useEffect} from 'react'
-import { getDetalleJuego } from '../../asyncmock'
+import {useState, useEffect} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import {db} from '../../services/config';
+import {getDoc, doc} from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     const [juego, setJuego] = useState(null);
     const {idItem} = useParams();
 
-    useEffect( () => {
-        getDetalleJuego(idItem)
-            .then(res => setJuego(res))
-            .catch(error => console.log(error))
+    useEffect (() => {
+      const nuevoDoc = doc(db, "Productos", idItem);
+
+      getDoc(nuevoDoc)
+        .then(res => {
+          const data = res.data();
+          const nuevoProducto = {id:res.id, ...data}
+          setJuego(nuevoProducto);
+        })
+        .catch(error => console.log(error))
     }, [idItem])
 
   return (

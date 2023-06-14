@@ -1,8 +1,5 @@
 import './Item.css'
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
-import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 
 
@@ -17,7 +14,6 @@ const Item = ({id, nombre, precio, img}) => {
           <p>ID: {id}</p>
           <Link to={`/item/${id}`}>Detalle del juego</Link>
         </Card.Body>
-        {/* <ItemCount /> */}
       </Card>
     </div>
   )

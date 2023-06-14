@@ -1,5 +1,5 @@
-import Item from "../Item/Item"
-import './ItemList.css'
+import Item from "../Item/Item";
+import './ItemList.css';
 
 const ItemList = ({videojuegos}) => {
   return (
@@ -9,4 +9,4 @@ const ItemList = ({videojuegos}) => {
   )
 }
 
-export default ItemList
+export default ItemList;
