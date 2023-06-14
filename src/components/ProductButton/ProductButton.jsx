@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const ProductButton = () => {
   return (
@@ -6,4 +6,4 @@ const ProductButton = () => {
   )
 }
 
-export default ProductButton
+export default ProductButton;
