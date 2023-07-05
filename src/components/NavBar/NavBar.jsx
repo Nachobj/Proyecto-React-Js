@@ -9,8 +9,8 @@ const NavBar = () => {
   return (
     <>
       <header>
-        <Link to={"/"}>
-          <h1 className='logo'>GAMEOVER</h1>
+        <Link className='logo' to={"/"}>
+          <h1>GAMEOVER</h1>
         </Link>
         <div>
         <Navbar className='nav-list' expand="lg">

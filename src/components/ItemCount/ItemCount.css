@@ -1,4 +1,4 @@
-button {
+/* button {
     background-color: blue;
     border: none;
     color: yellow;
@@ -15,4 +15,43 @@ p {
     font-size: 24px;
     font-weight: bold;
     margin: 0 10px;
+} */
+
+.containerCount{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
+
+.containerCount strong{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.containerButton{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }

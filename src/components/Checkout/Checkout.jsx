@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { db } from "../../services/config";
 import { collection, addDoc } from "firebase/firestore";
+import './Checkout.css';
 
 const Checkout = () => {
     const {cart, clearCart} = useContext(CartContext);
@@ -30,7 +31,8 @@ const Checkout = () => {
             items: cart.map(producto => ({
                 id: producto.item.id,
                 nombre: producto.item.nombre,
-                quantity: producto.item.quantity,
+                // quantity: producto.item.quantity,
+                quantity: producto.quantity,
             })),
             total: cart.reduce((total, producto) => total + producto.item.precio * producto.quantity, 0),
             nombre,
@@ -46,7 +48,7 @@ const Checkout = () => {
             })
             .catch((error) => {
                 console.log("Error al realizar el pedido", error);
-                setError("Ocurrió un error al generar el pedido, intente nuevamente")
+                setError("Ocurrió un error al generar el pedido, intente nuevamente");
             })
     }
 
@@ -91,7 +93,7 @@ const Checkout = () => {
                 error && <p style={{color:"red"}}>{error}</p>
             }
 
-            <button type="submit">Finalizar pedido</button>
+            <button className="btnEnd" type="submit">Finalizar pedido</button>
 
             {
                 ordenId && (

@@ -1,21 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import './ItemCount.css';
 
 const ItemCount = ({inicial, stock, añadir}) => {
     const [count, setCount] = useState(inicial);
-    const [color, setColor] = useState("black");
+    // const [color, setColor] = useState("black");
 
-    useEffect( () => {
-        console.log("Se ejecutó el useEffect!")
-        document.title = `Contador: ${count}`;
+    // useEffect( () => {
+    //     document.title = `Contador: ${count}`;
 
-       if(count > 5) {
-            setColor("blue")
-       } else {
-            setColor("yellow")
-       }
+    //    if(count > 5) {
+    //         setColor("blue")
+    //    } else {
+    //         setColor("yellow")
+    //    }
 
-    }, [count])
+    // }, [count])
 
     const sumarProducto = () => {
         if(count < stock) {
@@ -29,22 +28,22 @@ const ItemCount = ({inicial, stock, añadir}) => {
         }
     }
 
-    const agregarProducto = () => {
-        console.log(`Agregado ${count} productos`);
-    }
+    // const agregarProducto = () => {
+    //     console.log(`Agregado ${count} productos`);
+    // }
 
   return (
     <>
-        <div>
-            <h2>Contador</h2>
-
+        <div className="containerCount">
             <button onClick={ eliminarProducto }> - </button>
             <strong>{count}</strong>
             <button onClick={ sumarProducto }> + </button>
             <br /><br />
 
         </div>
-        <button onClick={() => añadir(count)}>Agregar producto</button>
+        <div className="containerButton">
+            <button className="btnGamer" onClick={() => añadir(count)}>Agregar producto</button>
+        </div>
     </>
   )
 }

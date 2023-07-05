@@ -18,20 +18,25 @@ const ItemDetail = ({id, nombre, precio, img, stock}) => {
   }
 
   return (
-    <div className='containerItem'>
-      <h2>Nombre: {nombre}</h2>
-      <h3>Precio: {precio}</h3>
-      <h3>ID: {id}</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga saepe minima reiciendis voluptas earum ipsa impedit tempore porro dicta rem sed sapiente alias aut, quae at numquam recusandae vel nesciunt.</p>
-      <img src={img} alt={nombre} />
+    <div className='product-card'>
+      <div className="product-image">
+        <img src={img} alt={nombre}/>
+      </div>
+      <div className="product-details">
+        <h2>{nombre}</h2>
+        <p>${precio}</p>
+        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
       {
 
       }
+      <div className="containerButton">
       {
-        añadirCantidad > 0 ? (<Link to={"/cart"}>Finalizar compra</Link>) : (<ItemCount inicial={1} stock={stock} añadir={cantidad}/>)
+        añadirCantidad > 0 ? (<Link to={"/cart"}><button>Finalizar compra</button></Link>) : (<ItemCount inicial={1} stock={stock} añadir={cantidad}/>)
       }
+      </div>
     </div>
   )
-}
 
+}
 export default ItemDetail;
