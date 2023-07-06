@@ -31,7 +31,6 @@ const Checkout = () => {
             items: cart.map(producto => ({
                 id: producto.item.id,
                 nombre: producto.item.nombre,
-                // quantity: producto.item.quantity,
                 quantity: producto.quantity,
             })),
             total: cart.reduce((total, producto) => total + producto.item.precio * producto.quantity, 0),

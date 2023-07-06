@@ -3,18 +3,6 @@ import './ItemCount.css';
 
 const ItemCount = ({inicial, stock, añadir}) => {
     const [count, setCount] = useState(inicial);
-    // const [color, setColor] = useState("black");
-
-    // useEffect( () => {
-    //     document.title = `Contador: ${count}`;
-
-    //    if(count > 5) {
-    //         setColor("blue")
-    //    } else {
-    //         setColor("yellow")
-    //    }
-
-    // }, [count])
 
     const sumarProducto = () => {
         if(count < stock) {
@@ -27,10 +15,6 @@ const ItemCount = ({inicial, stock, añadir}) => {
             setCount(count - 1);
         }
     }
-
-    // const agregarProducto = () => {
-    //     console.log(`Agregado ${count} productos`);
-    // }
 
   return (
     <>

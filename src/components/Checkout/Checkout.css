@@ -18,16 +18,3 @@ input {
 .btnEnd {
     margin: 15px auto;
 }
-
-/* input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-  } */

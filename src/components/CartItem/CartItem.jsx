@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import Card from 'react-bootstrap/Card';
-import'./CartItem.css'
+import'./CartItem.css';
 
 const CartItem = ({item, quantity, img, nombre}) => {
     const {removeItem} = useContext(CartContext);

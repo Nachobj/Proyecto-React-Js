@@ -1,36 +1,17 @@
-/* button {
-    background-color: blue;
-    border: none;
-    color: yellow;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size:  16px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-p {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 10px;
-} */
-
-.containerCount{
+.containerCount {
     display: flex;
     justify-content: center;
     margin: 10px;
 }
 
-.containerCount strong{
+.containerCount strong {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     margin: 5px;
 }
 
-.containerButton{
+.containerButton {
     display: flex;
     justify-content: center;
     margin: 10px;
